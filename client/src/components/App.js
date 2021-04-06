@@ -3,6 +3,7 @@ import Home from "./Home";
 import { Router, Route, Switch } from "react-router-dom";
 import history from "../history";
 import Leaderboard from "./Leaderboard";
+import AddQuestions from "./AddQuestions";
 import Quiz from "./Quiz";
 
 export default class App extends Component {
@@ -12,6 +13,7 @@ export default class App extends Component {
         <Switch>
           <Route exact path="/quiz" component={Quiz}></Route>
           <Route exact path="/leaderboard" component={Leaderboard}></Route>
+          <Route exact path="/add" component={AddQuestions}></Route>
           <Route path="/" component={Home}></Route>
         </Switch>
       </Router>

@@ -39,7 +39,10 @@ export default class Leaderboard extends Component {
       <>
         <BackTo toRoute="" to="Home"></BackTo>
 
-        <div className="ui container" style={{ paddingTop: "60px" }}>
+        <div
+          className="ui form"
+          style={{ paddingTop: "60px", paddingLeft: "10%", paddingRight: "10%" }}
+        >
           <div class="ui placeholder segment">
             <h2 class="ui center aligned floated header">
               <i class="trophy icon"></i>

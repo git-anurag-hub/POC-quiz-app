@@ -100,7 +100,7 @@ export default class Quiz extends Component {
             </h2>
             <div class="ui clearing divider"></div>
             <div class="two fields">
-              <div class="field">
+              <div class="field" style={{ maxWidth: "100%" }}>
                 <label>Name</label>
                 <input
                   type="text"
@@ -110,7 +110,7 @@ export default class Quiz extends Component {
                   onChange={(e) => this.setState({ name: e.target.value })}
                 />
               </div>
-              <div class="field">
+              <div class="field" style={{ maxWidth: "100%" }}>
                 <label>Email</label>
                 <input
                   type="text"
@@ -126,22 +126,30 @@ export default class Quiz extends Component {
             ) : (
               <Loader></Loader>
             )}
-          </div>
-          <div class="field">
-            <div class="ui toggle checkbox">
-              <input
-                type="checkbox"
-                name="sure"
-                required
-                onChange={(e) => this.setState({ sure: !this.state.sure })}
-                value={this.state.sure}
-              />
-              <label>Are you sure you want to submit?</label>
+            <div
+              class="field"
+              style={{ maxWidth: "100%", marginLeft: "inherit", marginRight: "inherit" }}
+            >
+              <div class="ui toggle checkbox">
+                <input
+                  type="checkbox"
+                  name="sure"
+                  required
+                  onChange={(e) => this.setState({ sure: !this.state.sure })}
+                  value={this.state.sure}
+                />
+                <label>Are you sure you want to submit?</label>
+              </div>
             </div>
+            <button
+              class="ui animated teal fade button fluid"
+              style={{ maxWidth: "100%", marginLeft: "inherit", marginRight: "inherit" }}
+              onClick={(e) => this.handleSubmit(e)}
+            >
+              Submit
+            </button>
           </div>
-          <button class="ui animated teal fade button fluid" onClick={(e) => this.handleSubmit(e)}>
-            Submit
-          </button>
+
           <br></br>
           <br></br>
           <br></br>
