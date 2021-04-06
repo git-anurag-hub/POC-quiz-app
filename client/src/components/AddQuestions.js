@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import axios from "axios";
-import Loader from "./Loader";
 import history from "../history";
 import BackTo from "./BackTo";
 
@@ -35,8 +34,8 @@ export default class Quiz extends Component {
         answer: this.state.answer,
         options,
       };
-      const res = await axios.post("/api/quiz", body);
-      console.log(res);
+      await axios.post("/api/quiz", body);
+      history.push("/");
     }
   };
 
