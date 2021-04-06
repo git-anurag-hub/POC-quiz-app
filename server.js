@@ -2,6 +2,7 @@ const express = require("express");
 const app = express();
 const gradesRouter = require("./src/routes/grades");
 const quizRouter = require("./src/routes/quiz");
+const path = require("path");
 
 require("./src/db/mongoose");
 
