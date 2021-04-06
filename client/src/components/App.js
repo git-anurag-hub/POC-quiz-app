@@ -10,8 +10,8 @@ export default class App extends Component {
     return (
       <Router history={history}>
         <Switch>
-          <Route path="/quiz" component={Quiz}></Route>
-          <Route path="/leaderboard" component={Leaderboard}></Route>
+          <Route exact path="/quiz" component={Quiz}></Route>
+          <Route exact path="/leaderboard" component={Leaderboard}></Route>
           <Route path="/" component={Home}></Route>
         </Switch>
       </Router>
