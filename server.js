@@ -5,9 +5,6 @@ const quizRouter = require("./src/routes/quiz");
 
 require("./src/db/mongoose");
 
-app.get("", (req, res) => {
-  res.send("Hello");
-});
 app.use(express.json());
 app.use(gradesRouter);
 app.use(quizRouter);
